@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ExtendAg Help (demo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#1091BB; --brown:#7D6856; --gray:#424242; --muted:#8A9AAA; --light:#F2F6F7; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Inter, Arial, sans-serif; color: var(--gray); background: var(--light); }
+  header { background:#fff; border-bottom:1px solid #e3e9eb; }
+  .bar { max-width: 960px; margin: 0 auto; padding: 14px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .brand { font-weight:700; font-size:18px; color: var(--blue); }
+  .brand span { color: var(--brown); font-weight:500; font-size:13px; margin-left:8px; }
+  .tag { font-size:12px; color: var(--muted); border:1px solid #d6dfe2; border-radius:999px; padding:4px 10px; white-space:nowrap; }
+  .hero { max-width: 960px; margin: 0 auto; padding: 48px 16px 24px; text-align:center; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-weight:600; color: var(--brown); }
+  h1 { font-size: 32px; margin: 8px 0 8px; color: var(--gray); }
+  .sub { color: var(--muted); margin:0 0 24px; }
+  #query { max-width: 720px; margin: 0 auto; min-height: 56px; text-align:left; }
+  .cards { max-width: 960px; margin: 24px auto 0; padding: 0 16px 48px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
+  .card { background:#fff; border-radius:10px; padding:18px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  .card h2 { font-size:15px; margin:0 0 10px; color: var(--blue); }
+  .card p, .card li { font-size:14px; line-height:1.5; margin:0; }
+  .card ul { margin:0; padding-left:18px; }
+  .card li + li { margin-top:6px; }
+  footer { text-align:center; font-size:12px; color: var(--muted); padding: 0 16px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">ExtendAg<span>a Cultura company</span></div>
+    <div class="tag">Demo by Mosaic · ConAgra</div>
+  </div>
+</header>
+<section class="hero">
+  <div class="eyebrow">Support</div>
+  <h1>How can we help?</h1>
+  <p class="sub">Ask a question in your own words. Answers come from ExtendAg articles for your company.</p>
+  <div id="query"></div>
+</section>
+<section class="cards">
+  <div class="card">
+    <h2>Try asking</h2>
+    <ul>
+      <li>Week 40 cucumber loads won't price, it says they did not qualify for a base price element</li>
+      <li>Then: I extended the end date and it still fails</li>
+    </ul>
+  </div>
+  <div class="card" id="case">
+    <h2>Still stuck?</h2>
+    <p>If the answer doesn't solve it, this is where the customer opens a case with ExtendAg support. Case submission is being connected.</p>
+  </div>
+</section>
+<footer>Demo page. Not an official ExtendAg site.</footer>
+<script src="https://external-search.ask-ai.co/demo/ask_ai_sb.js"></script>
+<script>
+  window.renderAskAISearchBar("#query", "e79bf688-e077-47d0-b95e-7eb025e36d35", {
+    langCode: "en",
+    submitRequest: { url: location.href.split("#")[0] + "#case" }
+  });
+</script>
+</body>
+</html>
